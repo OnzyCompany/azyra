@@ -1,11 +1,20 @@
-<div align="center">
+# AZYRA | Luxury Link-in-Bio
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+A high-end, glassmorphism-themed link-in-bio page developed for **AZYRA**, a luxury fashion brand.
 
-  <h1>Built with AI Studio</h2>
+## Project Details
+- **Developer:** [jKayzz](https://www.instagram.com/_xkayky.s/)
+- **Brand:** AZYRA
+- **Vibe:** Luxury, Minimalist, Glassmorphism, Brazilian Fashion
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Features
+- **Glassmorphism Design:** Sophisticated background blur and clean interactive elements.
+- **Single-File Architecture:** Fully self-contained `index.html` for easy deployment.
+- **Responsive Layout:** Optimized for high-end mobile devices and desktop browsers.
+- **Custom Branding:** Integrated AZYRA brand assets and typography.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Development
+This project was designed and built focusing on a premium user experience, removing unnecessary clutter like scrollbars and leveraging high-contrast typography for legibility.
 
-</div>
+---
+© 2026 AZYRA. Developed by jKayzz.
