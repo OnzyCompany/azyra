@@ -352,23 +352,7 @@
                 <div class="card-arrow">›</div>
             </a>
 
-            <!-- Card 2: Denize -->
-            <a id="link-denize" href="#" class="card" target="_blank">
-                <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.25_iankzb.jpg');"></div>
-                <div class="card-overlay"></div>
-                <div class="glass-panel">
-                    <svg viewBox="0 0 24 24" stroke="none" fill="white">
-                        <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3H5v-2h14v2z"/>
-                    </svg>
-                </div>
-                <div class="card-content">
-                    <span class="card-label" data-i18n="vipLabel">VIP SERVICE</span>
-                    <span class="card-title" data-i18n="denizeTitle">Chat with Denize</span>
-                </div>
-                <div class="card-arrow">›</div>
-            </a>
-
-            <!-- Card 3: Fernanda Santos -->
+            <!-- Card 2: Fernanda Santos -->
             <a id="link-fernanda" href="#" class="card" target="_blank">
                 <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.24_1_ek3vds.jpg');"></div>
                 <div class="card-overlay"></div>
@@ -435,8 +419,6 @@
                 tagline: "fashion • luxury • purpose",
                 storeLabel: "AZYRA",
                 storeTitle: "Store WhatsApp",
-                vipLabel: "VIP SERVICE",
-                denizeTitle: "Chat with Denize",
                 teamLabel: "OUR TEAM",
                 fernandaTitle: "Fernanda Santos",
                 communityLabel: "COMMUNITY",
@@ -445,15 +427,12 @@
                 shopTitle: "Azyra Shop",
                 developedBy: "Developed by",
                 storeMsg: "Hello, I came from the AZYRA bio link and would like more information.",
-                denizeMsg: "Hello Denize, I came from the AZYRA bio link.",
                 fernandaMsg: "Hello Fernanda Santos, I came from the AZYRA bio link."
             },
             pt: {
                 tagline: "moda • luxo • propósito",
                 storeLabel: "AZYRA",
                 storeTitle: "WhatsApp da Loja",
-                vipLabel: "ATENDIMENTO VIP",
-                denizeTitle: "Falar com a Denize",
                 teamLabel: "NOSSA EQUIPE",
                 fernandaTitle: "Fernanda Santos",
                 communityLabel: "COMUNIDADE",
@@ -462,7 +441,6 @@
                 shopTitle: "Azyra Shop",
                 developedBy: "Desenvolvido por",
                 storeMsg: "Olá, vim pelo link na bio da AZYRA e gostaria de saber mais informações.",
-                denizeMsg: "Olá Denize, vim pelo link na bio da AZYRA.",
                 fernandaMsg: "Olá Fernanda Santos, vim pelo link na bio da AZYRA."
             }
         };
@@ -485,7 +463,6 @@
             const t = translations[lang];
             
             document.getElementById('link-store').href = `https://wa.me/14047257001?text=${encodeURIComponent(t.storeMsg)}`;
-            document.getElementById('link-denize').href = `https://wa.me/14043143250?text=${encodeURIComponent(t.denizeMsg)}`;
             document.getElementById('link-fernanda').href = `https://wa.me/14044281353?text=${encodeURIComponent(t.fernandaMsg)}`;
         }
 
