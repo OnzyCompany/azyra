@@ -276,6 +276,36 @@
             stroke: none !important;
         }
 
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--espresso);
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .lang-btn.active {
+            background: var(--espresso);
+            color: #fff;
+            border-color: var(--espresso);
+        }
+
         @media (max-width: 480px) {
             body {
                 padding: 0;
@@ -292,18 +322,22 @@
 </head>
 <body>
     <div class="container">
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="setLanguage('pt')">PT</button>
+        </div>
         <header>
             <div class="profile-wrapper">
                 <img src="https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.25_2_qtz0b7.jpg" alt="AZYRA Logo" class="profile-image" referrerPolicy="no-referrer">
             </div>
             <h1>AZYRA</h1>
-            <p class="tagline">moda • luxo • propósito</p>
+            <p class="tagline" data-i18n="tagline">fashion • luxury • purpose</p>
             <div class="divider"></div>
         </header>
 
         <main class="links-container">
             <!-- Card 1: WhatsApp da Loja -->
-            <a href="https://wa.me/14047257001?text=Olá,%20vim%20pelo%20link%20na%20bio%20da%20AZYRA%20e%20gostaria%20de%20saber%20mais%20informações." class="card" target="_blank">
+            <a id="link-store" href="#" class="card" target="_blank">
                 <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.24_2_wodjkq.jpg');"></div>
                 <div class="card-overlay"></div>
                 <div class="glass-panel">
@@ -312,14 +346,14 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label">AZYRA</span>
-                    <span class="card-title">WhatsApp da Loja</span>
+                    <span class="card-label" data-i18n="storeLabel">AZYRA</span>
+                    <span class="card-title" data-i18n="storeTitle">Store WhatsApp</span>
                 </div>
                 <div class="card-arrow">›</div>
             </a>
 
             <!-- Card 2: Denize -->
-            <a href="https://wa.me/14043143250?text=Olá%20Denize,%20vim%20pelo%20link%20na%20bio%20da%20AZYRA." class="card" target="_blank">
+            <a id="link-denize" href="#" class="card" target="_blank">
                 <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.25_iankzb.jpg');"></div>
                 <div class="card-overlay"></div>
                 <div class="glass-panel">
@@ -328,14 +362,14 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label">ATENDIMENTO VIP</span>
-                    <span class="card-title">Falar com a Denize</span>
+                    <span class="card-label" data-i18n="vipLabel">VIP SERVICE</span>
+                    <span class="card-title" data-i18n="denizeTitle">Chat with Denize</span>
                 </div>
                 <div class="card-arrow">›</div>
             </a>
 
             <!-- Card 3: Fernanda Santos -->
-            <a href="https://wa.me/14044281353?text=Olá%20Fernanda%20Santos,%20vim%20pelo%20link%20na%20bio%20da%20AZYRA." class="card" target="_blank">
+            <a id="link-fernanda" href="#" class="card" target="_blank">
                 <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.24_1_ek3vds.jpg');"></div>
                 <div class="card-overlay"></div>
                 <div class="glass-panel">
@@ -345,8 +379,8 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label">NOSSA EQUIPE</span>
-                    <span class="card-title">Fernanda Santos</span>
+                    <span class="card-label" data-i18n="teamLabel">OUR TEAM</span>
+                    <span class="card-title" data-i18n="fernandaTitle">Fernanda Santos</span>
                 </div>
                 <div class="card-arrow">›</div>
             </a>
@@ -364,8 +398,8 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label">COMUNIDADE</span>
-                    <span class="card-title">Grupo Exclusivo</span>
+                    <span class="card-label" data-i18n="communityLabel">COMMUNITY</span>
+                    <span class="card-title" data-i18n="groupTitle">Exclusive Group</span>
                 </div>
                 <div class="card-arrow">›</div>
             </a>
@@ -382,8 +416,8 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label">NOSSA LOJA</span>
-                    <span class="card-title">Azyra Shop</span>
+                    <span class="card-label" data-i18n="shopLabel">OUR STORE</span>
+                    <span class="card-title" data-i18n="shopTitle">Azyra Shop</span>
                 </div>
                 <div class="card-arrow">›</div>
             </a>
@@ -391,9 +425,73 @@
 
         <footer>
             <p class="footer-logo">AZYRA</p>
-            <p class="footer-location">Atlanta, USA — Desenvolvido por <a href="https://www.instagram.com/_xkayky.s/" target="_blank">jKayzz</a></p>
+            <p class="footer-location"><span data-i18n="developedBy">Developed by</span> <a href="https://www.instagram.com/_xkayky.s/" target="_blank">jKayzz</a></p>
         </footer>
     </div>
+
+    <script>
+        const translations = {
+            en: {
+                tagline: "fashion • luxury • purpose",
+                storeLabel: "AZYRA",
+                storeTitle: "Store WhatsApp",
+                vipLabel: "VIP SERVICE",
+                denizeTitle: "Chat with Denize",
+                teamLabel: "OUR TEAM",
+                fernandaTitle: "Fernanda Santos",
+                communityLabel: "COMMUNITY",
+                groupTitle: "Exclusive Group",
+                shopLabel: "OUR STORE",
+                shopTitle: "Azyra Shop",
+                developedBy: "Developed by",
+                storeMsg: "Hello, I came from the AZYRA bio link and would like more information.",
+                denizeMsg: "Hello Denize, I came from the AZYRA bio link.",
+                fernandaMsg: "Hello Fernanda Santos, I came from the AZYRA bio link."
+            },
+            pt: {
+                tagline: "moda • luxo • propósito",
+                storeLabel: "AZYRA",
+                storeTitle: "WhatsApp da Loja",
+                vipLabel: "ATENDIMENTO VIP",
+                denizeTitle: "Falar com a Denize",
+                teamLabel: "NOSSA EQUIPE",
+                fernandaTitle: "Fernanda Santos",
+                communityLabel: "COMUNIDADE",
+                groupTitle: "Grupo Exclusivo",
+                shopLabel: "NOSSA LOJA",
+                shopTitle: "Azyra Shop",
+                developedBy: "Desenvolvido por",
+                storeMsg: "Olá, vim pelo link na bio da AZYRA e gostaria de saber mais informações.",
+                denizeMsg: "Olá Denize, vim pelo link na bio da AZYRA.",
+                fernandaMsg: "Olá Fernanda Santos, vim pelo link na bio da AZYRA."
+            }
+        };
+
+        function setLanguage(lang) {
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+            });
+
+            // Update text elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerText = translations[lang][key];
+                }
+            });
+
+            // Update WhatsApp links
+            const t = translations[lang];
+            
+            document.getElementById('link-store').href = `https://wa.me/14047257001?text=${encodeURIComponent(t.storeMsg)}`;
+            document.getElementById('link-denize').href = `https://wa.me/14043143250?text=${encodeURIComponent(t.denizeMsg)}`;
+            document.getElementById('link-fernanda').href = `https://wa.me/14044281353?text=${encodeURIComponent(t.fernandaMsg)}`;
+        }
+
+        // Initialize with English as requested
+        setLanguage('en');
+    </script>
 </body>
 </html>
 
