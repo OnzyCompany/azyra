@@ -13,6 +13,7 @@
             --warm-beige: #E8E0D5;
             --espresso: #1A1209;
             --gold: #C9A84C;
+            --brand-green: #0F2D26;
             --text-muted: #8B7355;
             --f-display: 'Cormorant Garamond', serif;
             --f-body: 'Inter', sans-serif;
@@ -77,25 +78,19 @@
         }
 
         .profile-wrapper {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            border: 1px solid var(--gold);
-            padding: 4px;
-            margin: 0 auto 16px;
-            background: rgba(255, 255, 255, 0.9);
+            width: 180px;
+            height: auto;
+            margin: 0 auto 12px;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
 
         .profile-image {
             width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain;
         }
 
         h1 {
@@ -110,12 +105,14 @@
         }
 
         .tagline {
-            font-size: 11px;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 16px;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            color: var(--espresso);
+            font-weight: 500;
+            margin-bottom: 24px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .divider {
@@ -176,10 +173,9 @@
         }
 
         .glass-panel {
-            width: 60px;
+            width: 65px;
             height: 100%;
-            background: rgba(255, 255, 255, 0.15);
-            border-right: 1px solid rgba(255, 255, 255, 0.15);
+            background: var(--brand-green);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -221,8 +217,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 24px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 22px;
             position: relative;
             z-index: 2;
             padding-right: 5px;
@@ -247,9 +243,9 @@
 
         .footer-location {
             font-family: var(--f-body);
-            font-size: 10px;
-            color: var(--text-muted);
-            letter-spacing: 0.1em;
+            font-size: 11px;
+            color: var(--espresso);
+            letter-spacing: 0.05em;
             line-height: 1.6;
             font-weight: 500;
         }
@@ -260,19 +256,32 @@
             font-weight: 700;
         }
 
+        .mobile-footer-bar {
+            display: none;
+            background: var(--brand-green);
+            color: var(--warm-beige);
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
         svg {
-            width: 24px;
-            height: 24px;
+            width: 28px;
+            height: 28px;
             fill: none;
-            stroke: #ffffff !important;
-            color: #ffffff !important;
+            stroke: var(--warm-beige) !important;
+            color: var(--warm-beige) !important;
             stroke-width: 1.5;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
 
         .wa-icon {
-            fill: #ffffff !important;
+            fill: var(--warm-beige) !important;
             stroke: none !important;
         }
 
@@ -301,9 +310,22 @@
         }
 
         .lang-btn.active {
-            background: var(--espresso);
+            background: var(--brand-green);
             color: #fff;
-            border-color: var(--espresso);
+            border-color: var(--brand-green);
+        }
+
+        @media (max-width: 1024px) {
+            .mobile-footer-bar {
+                display: block;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 100;
+            }
+            .container {
+                padding-bottom: 60px; /* Space for the bar */
+            }
         }
 
         @media (max-width: 480px) {
@@ -311,11 +333,13 @@
                 padding: 0;
             }
             .container {
-                height: 100vh;
+                height: calc(100vh - 40px);
                 max-height: none;
                 border-radius: 0;
                 border: none;
-                padding: 40px 20px 60px;
+                padding-top: 40px;
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     </style>
@@ -328,11 +352,9 @@
         </div>
         <header>
             <div class="profile-wrapper">
-                <img src="https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.25_2_qtz0b7.jpg" alt="AZYRA Logo" class="profile-image" referrerPolicy="no-referrer">
+                <img src="https://res.cloudinary.com/dtuuduvil/image/upload/v1776961796/Design_sem_nome_97_kwhpzt.png" alt="AZYRA Logo" class="profile-image" referrerPolicy="no-referrer">
             </div>
-            <h1>AZYRA</h1>
-            <p class="tagline" data-i18n="tagline">fashion • luxury • purpose</p>
-            <div class="divider"></div>
+            <p class="tagline" data-i18n="tagline">Versatile, elegant and sophisticated pieces</p>
         </header>
 
         <main class="links-container">
@@ -346,10 +368,10 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label" data-i18n="storeLabel">AZYRA</span>
+                    <span class="card-label" data-i18n="storeLabel">WHATSAPP</span>
                     <span class="card-title" data-i18n="storeTitle">Store WhatsApp</span>
                 </div>
-                <div class="card-arrow">›</div>
+                <div class="card-arrow">&rarr;</div>
             </a>
 
             <!-- Card 2: Fernanda Santos -->
@@ -358,15 +380,17 @@
                 <div class="card-overlay"></div>
                 <div class="glass-panel">
                     <svg viewBox="0 0 24 24" stroke="white" fill="none">
-                        <path d="M19.07 4.93a10 10 0 0 0-14.14 0M12 2a10 10 0 0 0-10 10v9h4v-7h12v7h4v-9a10 10 0 0 0-10-10z"/>
-                        <circle cx="12" cy="13" r="3"/>
+                        <path d="M12 21c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8a8 8 0 0 0 4.16 7.02l2.34-.52C10.5 21.5 11.2 21 12 21z"/>
+                        <circle cx="12" cy="11" r="3"/>
+                        <path d="M19 22v-3.1a4.2 4.2 0 0 0-3.6-4.1"/>
+                        <path d="M5 22v-3.1a4.2 4.2 0 0 1 3.6-4.1"/>
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label" data-i18n="teamLabel">OUR TEAM</span>
-                    <span class="card-title" data-i18n="fernandaTitle">Fernanda Santos</span>
+                    <span class="card-label" data-i18n="teamLabel">SERVICE</span>
+                    <span class="card-title" data-i18n="fernandaTitle">Customer Service</span>
                 </div>
-                <div class="card-arrow">›</div>
+                <div class="card-arrow">&rarr;</div>
             </a>
 
             <!-- Card 4: Grupo Exclusivo -->
@@ -385,7 +409,7 @@
                     <span class="card-label" data-i18n="communityLabel">COMMUNITY</span>
                     <span class="card-title" data-i18n="groupTitle">Exclusive Group</span>
                 </div>
-                <div class="card-arrow">›</div>
+                <div class="card-arrow">&rarr;</div>
             </a>
 
             <!-- Card 5: Azyra Shop -->
@@ -400,45 +424,69 @@
                     </svg>
                 </div>
                 <div class="card-content">
-                    <span class="card-label" data-i18n="shopLabel">OUR STORE</span>
-                    <span class="card-title" data-i18n="shopTitle">Azyra Shop</span>
+                    <span class="card-label" data-i18n="shopLabel">STORE</span>
+                    <span class="card-title" data-i18n="shopTitle">Azyra Collection</span>
                 </div>
-                <div class="card-arrow">›</div>
+                <div class="card-arrow">&rarr;</div>
+            </a>
+
+            <!-- Card 6: Location -->
+            <a href="https://www.google.com/maps/search/?api=1&query=1260+powers+ferry+Rd+unit+F%2C+Marietta+-+GA+30067" class="card" target="_blank">
+                <div class="card-bg" style="background-image: url('https://res.cloudinary.com/dtuuduvil/image/upload/v1776551852/WhatsApp_Image_2026-04-18_at_19.33.25_iankzb.jpg'); opacity: 0.6;"></div>
+                <div class="card-overlay"></div>
+                <div class="glass-panel">
+                    <svg viewBox="0 0 24 24" stroke="white">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <span class="card-label" data-i18n="locationLabel">LOCATION</span>
+                    <span class="card-title" data-i18n="locationTitle">Our Location</span>
+                </div>
+                <div class="card-arrow">&rarr;</div>
             </a>
         </main>
 
         <footer>
-            <p class="footer-logo">AZYRA</p>
             <p class="footer-location"><span data-i18n="developedBy">Developed by</span> <a href="https://www.instagram.com/_xkayky.s/" target="_blank">jKayzz</a></p>
         </footer>
+    </div>
+    
+    <div class="mobile-footer-bar">
+        CLÁSSICA • FEMININA • ATEMPORAL • EXCLUSIVA
     </div>
 
     <script>
         const translations = {
             en: {
-                tagline: "fashion • luxury • purpose",
-                storeLabel: "AZYRA",
+                tagline: "Versatile, elegant and sophisticated pieces",
+                storeLabel: "WHATSAPP",
                 storeTitle: "Store WhatsApp",
-                teamLabel: "OUR TEAM",
-                fernandaTitle: "Fernanda Santos",
+                teamLabel: "SERVICE",
+                fernandaTitle: "Atendimento com Fernanda",
                 communityLabel: "COMMUNITY",
                 groupTitle: "Exclusive Group",
-                shopLabel: "OUR STORE",
-                shopTitle: "Azyra Shop",
+                shopLabel: "STORE",
+                shopTitle: "Azyra Collection",
+                locationLabel: "LOCATION",
+                locationTitle: "Our Location",
                 developedBy: "Developed by",
                 storeMsg: "Hello, I came from the AZYRA bio link and would like more information.",
                 fernandaMsg: "Hello Fernanda Santos, I came from the AZYRA bio link."
             },
             pt: {
-                tagline: "moda • luxo • propósito",
-                storeLabel: "AZYRA",
-                storeTitle: "WhatsApp da Loja",
-                teamLabel: "NOSSA EQUIPE",
-                fernandaTitle: "Fernanda Santos",
+                tagline: "Peças versáteis, elegantes e sofisticadas",
+                storeLabel: "WHATSAPP",
+                storeTitle: "WhatsApp da loja",
+                teamLabel: "ATENDIMENTO",
+                fernandaTitle: "Atendimento com Fernanda",
                 communityLabel: "COMUNIDADE",
-                groupTitle: "Grupo Exclusivo",
-                shopLabel: "NOSSA LOJA",
-                shopTitle: "Azyra Shop",
+                groupTitle: "Grupo exclusivo",
+                shopLabel: "LOJA",
+                shopTitle: "Coleção Azyra",
+                locationLabel: "LOCALIZAÇÃO",
+                locationTitle: "Onde estamos",
                 developedBy: "Desenvolvido por",
                 storeMsg: "Olá, vim pelo link na bio da AZYRA e gostaria de saber mais informações.",
                 fernandaMsg: "Olá Fernanda Santos, vim pelo link na bio da AZYRA."
@@ -448,7 +496,8 @@
         function setLanguage(lang) {
             // Update button states
             document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.innerText.toLowerCase() === lang);
+                const btnLang = btn.innerText.toLowerCase();
+                btn.classList.toggle('active', btnLang === lang);
             });
 
             // Update text elements
